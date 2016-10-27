@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		B18575451DC17F1400759313 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18575441DC17F1400759313 /* AppDelegate.swift */; };
-		B18575471DC17F1400759313 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18575461DC17F1400759313 /* ViewController.swift */; };
+		B18575471DC17F1400759313 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18575461DC17F1400759313 /* LoginVC.swift */; };
 		B185754A1DC17F1400759313 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B18575481DC17F1400759313 /* Main.storyboard */; };
 		B185754C1DC17F1400759313 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B185754B1DC17F1400759313 /* Assets.xcassets */; };
 		B185754F1DC17F1400759313 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B185754D1DC17F1400759313 /* LaunchScreen.storyboard */; };
+		B18575571DC1805500759313 /* Rounded_Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18575561DC1805500759313 /* Rounded_Button.swift */; };
+		B185755A1DC180C100759313 /* Rounded_TextFeild.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18575591DC180C100759313 /* Rounded_TextFeild.swift */; };
+		B185755F1DC1889300759313 /* Teccher_LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B185755E1DC1889300759313 /* Teccher_LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B18575411DC17F1400759313 /* Vocapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vocapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B18575441DC17F1400759313 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B18575461DC17F1400759313 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B18575461DC17F1400759313 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		B18575491DC17F1400759313 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B185754B1DC17F1400759313 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B185754E1DC17F1400759313 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B18575501DC17F1400759313 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B18575561DC1805500759313 /* Rounded_Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rounded_Button.swift; sourceTree = "<group>"; };
+		B18575591DC180C100759313 /* Rounded_TextFeild.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rounded_TextFeild.swift; sourceTree = "<group>"; };
+		B185755E1DC1889300759313 /* Teccher_LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Teccher_LoginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,49 @@
 		B18575431DC17F1400759313 /* Vocapp */ = {
 			isa = PBXGroup;
 			children = (
-				B18575441DC17F1400759313 /* AppDelegate.swift */,
-				B18575461DC17F1400759313 /* ViewController.swift */,
+				B185755D1DC1836300759313 /* View Controllers */,
+				B185755B1DC1833000759313 /* Storyboards */,
+				B18575581DC1805900759313 /* Styles */,
+				B185755C1DC1834500759313 /* Supporting Files */,
+			);
+			path = Vocapp;
+			sourceTree = "<group>";
+		};
+		B18575581DC1805900759313 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				B18575561DC1805500759313 /* Rounded_Button.swift */,
+				B18575591DC180C100759313 /* Rounded_TextFeild.swift */,
+			);
+			name = Styles;
+			sourceTree = "<group>";
+		};
+		B185755B1DC1833000759313 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
 				B18575481DC17F1400759313 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		B185755C1DC1834500759313 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				B185754B1DC17F1400759313 /* Assets.xcassets */,
+				B18575441DC17F1400759313 /* AppDelegate.swift */,
 				B185754D1DC17F1400759313 /* LaunchScreen.storyboard */,
 				B18575501DC17F1400759313 /* Info.plist */,
 			);
-			path = Vocapp;
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B185755D1DC1836300759313 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B18575461DC17F1400759313 /* LoginVC.swift */,
+				B185755E1DC1889300759313 /* Teccher_LoginVC.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +178,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B18575471DC17F1400759313 /* ViewController.swift in Sources */,
+				B18575471DC17F1400759313 /* LoginVC.swift in Sources */,
+				B185755F1DC1889300759313 /* Teccher_LoginVC.swift in Sources */,
 				B18575451DC17F1400759313 /* AppDelegate.swift in Sources */,
+				B18575571DC1805500759313 /* Rounded_Button.swift in Sources */,
+				B185755A1DC180C100759313 /* Rounded_TextFeild.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +305,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 723YBZ5VD3;
 				INFOPLIST_FILE = Vocapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.abstractapps.Vocapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -274,6 +319,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 723YBZ5VD3;
 				INFOPLIST_FILE = Vocapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.abstractapps.Vocapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

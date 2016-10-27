@@ -1,14 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="Vocapp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +18,145 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="CcL-v4-Iof">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CcL-v4-Iof" secondAttribute="height" multiplier="1:1" id="1tr-m3-Zmr"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="262" id="ocN-tF-Qhw"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Classroom Code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="avV-Iw-SRh" customClass="Rounded_TextFeild" customModule="Vocapp" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="kfM-pg-6Dk"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URc-rA-MLK" customClass="Rounded_Button" customModule="Vocapp" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.41689661210000001" green="0.83721984009999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="OLR-V8-iNg"/>
+                                </constraints>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5Q-ec-BCI">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ccx-ah-w25"/>
+                                    <constraint firstAttribute="width" constant="179" id="err-9M-KTQ"/>
+                                </constraints>
+                                <state key="normal" title="Don't Have A Class Code?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWw-Ex-1Ad" customClass="Rounded_Button" customModule="Vocapp" customModuleProvider="target">
+                                <color key="backgroundColor" red="1" green="0.446683875657225" blue="0.15813026083452753" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="gqA-gd-9I0"/>
+                                </constraints>
+                                <state key="normal" title="Teacher Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fvA-rA-dZZ" kind="show" id="bmp-Cy-Nb5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.45704877519023634" blue="0.86565859602204653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CcL-v4-Iof" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="0Pw-9g-qhc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="J5Q-ec-BCI" secondAttribute="bottom" constant="8" id="0hn-iG-bcW"/>
+                            <constraint firstItem="avV-Iw-SRh" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="0pM-ia-uX5"/>
+                            <constraint firstItem="URc-rA-MLK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2HX-Ae-ECI"/>
+                            <constraint firstItem="vWw-Ex-1Ad" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="K0f-hF-IIC"/>
+                            <constraint firstItem="URc-rA-MLK" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="LfE-uU-HP2"/>
+                            <constraint firstItem="J5Q-ec-BCI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YeP-XG-d2t"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CcL-v4-Iof" secondAttribute="trailing" constant="41" id="d1u-YG-eFM"/>
+                            <constraint firstItem="avV-Iw-SRh" firstAttribute="top" secondItem="CcL-v4-Iof" secondAttribute="bottom" constant="15" id="dXP-K4-op3"/>
+                            <constraint firstItem="avV-Iw-SRh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="eHL-fe-Jqb"/>
+                            <constraint firstItem="URc-rA-MLK" firstAttribute="top" secondItem="avV-Iw-SRh" secondAttribute="bottom" constant="8" id="fp4-8i-FA9"/>
+                            <constraint firstItem="CcL-v4-Iof" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="gMW-PC-kWV"/>
+                            <constraint firstItem="vWw-Ex-1Ad" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="o4M-IR-4hT"/>
+                            <constraint firstItem="vWw-Ex-1Ad" firstAttribute="top" secondItem="URc-rA-MLK" secondAttribute="bottom" constant="8" id="vex-Tj-NcX"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-98.400000000000006" y="123.68815592203899"/>
+        </scene>
+        <!--Teccher LoginVC-->
+        <scene sceneID="CbV-b6-cMH">
+            <objects>
+                <viewController id="fvA-rA-dZZ" customClass="Teccher_LoginVC" customModule="Vocapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wq4-4I-XT1"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vv3-88-Kkd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aj2-ei-Slq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fbr-ns-eyV">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="0JM-9W-XYV"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Techer Login" id="Ny2-23-JHY">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="Qkn-0Z-35O">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="d8F-SU-wEg"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="JfK-5A-rfs">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="lMz-Wu-u8g"/>
+                                </constraints>
+                            </progressView>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="37P-wT-W0f">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D9i-Fx-OcW">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="PL0-Uo-46N"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Zxb-nv-TXB"/>
+                                    <barButtonItem systemItem="refresh" id="06R-Ml-2mz"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="d3L-R7-miU"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JfK-5A-rfs" firstAttribute="top" secondItem="Fbr-ns-eyV" secondAttribute="bottom" id="3AL-rt-3UA"/>
+                            <constraint firstItem="D9i-Fx-OcW" firstAttribute="top" secondItem="37P-wT-W0f" secondAttribute="bottom" id="4N3-fq-nFX"/>
+                            <constraint firstItem="37P-wT-W0f" firstAttribute="top" secondItem="Fbr-ns-eyV" secondAttribute="bottom" id="9EX-O6-8bn"/>
+                            <constraint firstAttribute="trailing" secondItem="37P-wT-W0f" secondAttribute="trailing" id="CMU-Ro-TuL"/>
+                            <constraint firstAttribute="trailing" secondItem="Fbr-ns-eyV" secondAttribute="trailing" id="FQf-KJ-a0S"/>
+                            <constraint firstAttribute="trailing" secondItem="JfK-5A-rfs" secondAttribute="trailing" id="Gp0-Xb-9f2"/>
+                            <constraint firstItem="37P-wT-W0f" firstAttribute="leading" secondItem="aj2-ei-Slq" secondAttribute="leading" id="Qqb-9B-cPL"/>
+                            <constraint firstItem="Vv3-88-Kkd" firstAttribute="top" secondItem="D9i-Fx-OcW" secondAttribute="bottom" id="ZkC-Ne-jQF"/>
+                            <constraint firstItem="Fbr-ns-eyV" firstAttribute="top" secondItem="wq4-4I-XT1" secondAttribute="bottom" id="aIg-Af-9gy"/>
+                            <constraint firstItem="JfK-5A-rfs" firstAttribute="leading" secondItem="aj2-ei-Slq" secondAttribute="leading" id="kbw-ja-q6h"/>
+                            <constraint firstAttribute="trailing" secondItem="D9i-Fx-OcW" secondAttribute="trailing" id="mEg-LL-A1Z"/>
+                            <constraint firstItem="Fbr-ns-eyV" firstAttribute="leading" secondItem="aj2-ei-Slq" secondAttribute="leading" id="mGn-yv-1Xj"/>
+                            <constraint firstItem="D9i-Fx-OcW" firstAttribute="leading" secondItem="aj2-ei-Slq" secondAttribute="leading" id="rT3-Q4-7KX"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hPb-4E-jed" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="532" y="123.68815592203899"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Logo" width="730" height="729"/>
+    </resources>
 </document>
